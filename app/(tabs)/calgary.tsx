@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, Linking } from 'react-native';
 import { router } from 'expo-router';
 
 export default function CalgaryPage() {
@@ -21,9 +21,9 @@ export default function CalgaryPage() {
       {/* Explore Calgary Button */}
       <TouchableOpacity 
         style={styles.smallButton} 
-        onPress={() => router.push('/calgary')}
+        onPress={() => {Linking.openURL("https://www.calgary.ca/home.html")}}
       >
-        <Text style={styles.buttonText}>Explore Calgary</Text>
+        <Text style={styles.buttonText}>Go to City Page</Text>
       </TouchableOpacity>
     </View>
   );
@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   cityInfo: {
     textAlign: 'center',
     color: '#E0E0E0',
-    fontSize: 16,
+    fontSize: 14,
     lineHeight: 24,
     marginBottom: 20,
     paddingHorizontal: 20,
